@@ -1,17 +1,4 @@
-import timeit
-import os
 from telethon.sync import TelegramClient
-import time
-import pyautogui as pg
-import colorama
-from colorama import Back, Fore, Style
-
-API_ID = 7108918
-API_HASH = "dece7611717647a28d7ac863c8224658"
-TOKEN = '941547549:AAFuHp0mXWkFFBKT_rUzgPdKbLBhgWCR-q4'
-from telethon import events
-
-client = TelegramClient('+213792473466', API_ID, API_HASH)  # nomer 213790444304
 client.start()  # запускаем клиент
 bot = 'vktarget_bot'
 dlgs = client.get_dialogs()  # получаем все наши названия каналов, групп в которых мы состоим
@@ -44,7 +31,7 @@ i = 0
 
 
 
-print(Fore.YELLOW + 'ISh Boshlandi')
+print('ISh Boshlandi')
 
 
 def send_msg_to_work():  # функция отправки сообщений к ботту для посещения сайтов
@@ -55,17 +42,17 @@ def send_msg_to_work():  # функция отправки сообщений к
     get_msg = client.get_messages(btc, limit=1)  # получаем сообщение которое нам отослал бот
    # print(get_msg[0].message)
     if get_msg[0].message == 'Начали поиск заданий..':
-        print(Fore.RED + '🛌 dam olarkamam')
+        print('🛌 dam olarkamam')
         time.sleep(60)
         print('damda 1min')
         client.send_message('vktarget', 'Задания')
         time.sleep(2)
         if get_msg[0].message == 'Начали поиск заданий..':
-            print(Fore.YELLOW + '1yo\'q')
+            print('1yo\'q')
             client.send_message('vktarget', 'Задания')
             time.sleep(2 * 60)
             if get_msg[-1].message == 'Начали поиск заданий..':
-                print(Fore.RED + '2😅 Baribir chiqmadi 😅')
+                print('2😅 Baribir chiqmadi 😅')
                 time.sleep(60)
                 client.send_message('vktarget', 'Задания')
                 time.sleep(2)
@@ -95,16 +82,16 @@ def send_msg_to_work():  # функция отправки сообщений к
             print('yana vazifa yo\'q ekan 💤️')
             time.sleep(50)
         else:
-            print(Fore.CYAN + '👨‍💻👨‍💻vazifa bajatmoqda👨‍💻👨‍💻')
+            print('👨‍💻👨‍💻vazifa bajatmoqda👨‍💻👨‍💻')
 
         if m1.message == 'Ошибка при проверке':
-            print(Fore.RED + '⛔ Eplolmadi ⛔')
+            print('⛔ Eplolmadi ⛔')
             time.sleep(5)
             get_msg[0].click(-2)
             time.sleep(2)
 
         else:
-            print(Fore.MAGENTA + '🤑 Bajardi 🤑')
+            print('🤑 Bajardi 🤑')
         time.sleep(1)
 
     time.sleep(2)  # ждем  прогрузки всех елементов сайта
